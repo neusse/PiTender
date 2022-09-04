@@ -124,8 +124,8 @@ def PourDrink(drink_name):
                 pump_number, calculated_pump_runtime, platform))
             pumpThreads.append(pump_t)
 
-            pump_t = threading.Thread(target=PercentDone, args=[total_runtime])
-            pumpThreads.append(pump_t)
+        pump_t = threading.Thread(target=PercentDone, args=[total_runtime])
+        pumpThreads.append(pump_t)
 
         # start the pump threads
         for thread in pumpThreads:
